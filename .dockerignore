@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log
+.git
+.github
+.gitignore
+.npmignore
+.DS_Store
+dist
+*.md
+docs
+examples
+tests
+benchmarks
+.nyc_output
+coverage

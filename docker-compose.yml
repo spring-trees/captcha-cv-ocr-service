@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  captcha-ocr-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./eng.traineddata:/app/eng.traineddata
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
