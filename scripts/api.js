@@ -37,8 +37,6 @@ app.post('/recognize', async (req, res) => {
         
         // 使用正規表示法過濾text，只保留數字
         const filteredText = text.replace(/[^\d]/g, '');
-        console.log(`識別結果 [${requestId}] (僅數字): ${filteredText}, 預期答案: ${expectedAnswer}`);
-        
         res.json({ 
             success: true, 
             text: filteredText,
@@ -53,7 +51,7 @@ app.post('/recognize', async (req, res) => {
           error: '處理圖片時發生錯誤' 
         });
     } finally {
-        console.log(`close job [${requestId}]`);
+        // console.log(`close job [${requestId}]`);
     }
 });
 
