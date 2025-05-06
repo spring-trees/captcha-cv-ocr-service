@@ -23,6 +23,8 @@ local stepTemplates = {
         'GITHUB_USERNAME',
         'GITHUB_TOKEN',
       ],
+      // 設定 Docker 建置平台為 linux/arm64
+      platform: 'linux/arm64',
     },
     when: { branch: [branch] },
   },
