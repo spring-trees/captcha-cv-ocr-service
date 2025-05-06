@@ -1,4 +1,4 @@
-FROM node:18-slim
+FROM --platform=linux/arm64 node:18-slim
 
 # 設置工作目錄
 WORKDIR /app
